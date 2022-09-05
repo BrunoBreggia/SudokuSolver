@@ -29,6 +29,14 @@ class Sudoku:
         sudoku.content = df.to_numpy()
         return sudoku
     
+    def to_csv(self, filename):
+        """
+        Loads sudoku to csv file (comma separated value file)
+        """
+        pd.DataFrame(self._content).to_csv(filename,
+                                           header=None,
+                                           index =None)
+    
     @property
     def content(self):
         return self._content

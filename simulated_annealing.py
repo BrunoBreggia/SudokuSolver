@@ -146,9 +146,7 @@ class SudokuSolver(SimulatedAnnealing):
         return cost
     
     def save_csv(self, filename="solved_sudoku.csv"):
-        pd.DataFrame(self.sudoku.content).to_csv(filename,
-                                                 header=None,
-                                                 index =None)
+        self.sudoku.to_csv(filename)
         
 if __name__ == '__main__':
     
